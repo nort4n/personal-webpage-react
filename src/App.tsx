@@ -3,6 +3,8 @@ import CustomLink from "./components/CustomLink";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import SecondMind from "./pages/SecondMind";
 
 const App = () => {
   return (
@@ -11,12 +13,17 @@ const App = () => {
         <nav className="flex text-slate-100 space-x-4">
           <CustomLink to="/">Home</CustomLink>
           <CustomLink to="/blog">Blog</CustomLink>
+          <CustomLink to="/contact">Contact</CustomLink>
+          <CustomLink to="/secondmind">Second Mind</CustomLink>
+          
         </nav>
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/secondmind" element={<SecondMind />} />
       </Routes>
     </div>
   );
